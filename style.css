@@ -1,0 +1,387 @@
+/* Global */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+html {
+    height: 100%;
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0)); /* Dégradé fluide */
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: radial-gradient(red, blue);
+    overflow-y: scroll;
+}
+
+.carousel-container {
+    position: relative;
+    width: 80%; /* Ajustez la largeur selon vos besoins */
+    height: 300px; /* Hauteur fixe pour afficher les slides */
+    margin: auto;
+    overflow: hidden; /* Masque les parties non visibles */
+    border: 1px solid #000000; /* Optionnel : bordure pour mieux voir le conteneur */
+    border-radius: 8px;
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Animation lors du déplacement */
+    width: 400%; /* Largeur totale : 100% x nombre de slides */
+    height: 100%; /* Prend la hauteur totale du conteneur */
+  }
+  
+  .carousel-item {
+    flex: 1; /* Chaque slide occupe 100% de la largeur visible */
+    min-width: 100%; /* Assure qu'une slide occupe tout l'espace visible */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  p, ul {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    z-index: 10;
+    border-radius: 5px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  
+  
+/* Formulaire sous forme de liste */
+.form-list {
+    list-style-type: none; /* Supprime les puces */
+    padding: 0;
+    margin: 0 auto;
+    max-width: 500px; /* Largeur maximale pour centrer */
+}
+
+.form-list li {
+    margin-bottom: 20px; /* Espacement entre les champs */
+}
+
+label {
+    display: block; /* Affiche les étiquettes au-dessus des champs */
+    margin-bottom: 5px; /* Espacement entre l'étiquette et le champ */
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%; /* Champs et zones de texte s'adaptent à la largeur */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+textarea {
+    resize: none; /* Empêche le redimensionnement */
+}
+
+input[type="button"] {
+    width: auto; /* S'adapte au contenu */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+input[type="button"]:hover {
+    background-color: red;
+}
+
+/* Centrage de la section Contact */
+#contact {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Navigation */
+.topnav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+   color: #000000;
+   background-color: rgb(162, 162, 162);
+    overflow: hidden;
+    align-items: center;
+}
+
+.topnav a, .topnav span {
+    padding: 14px 16px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.topnav span {
+    margin-right: auto;
+    font-family: Georgia, serif;
+}
+
+.topnav a:hover {
+    color: red;
+}
+
+.topnav a.active {
+    color: red;
+}
+.topnav.responsive {
+    flex-direction: column;
+  }
+  
+  .topnav.responsive a {
+    display: block;
+    text-align: left;
+  }
+  
+/* Sections */
+section {
+    min-height: 200px;
+    padding: 20px 0;
+}
+
+
+
+#profil, #contact {
+    text-align: center;
+}
+
+#photo {
+    display: block;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+/* Flip Boxes */
+/* Flip Boxes */
+#projets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+#projet3 .flip-box-back {
+    background-image: url('image.jpg'); /* Remplacez par le chemin de votre image */
+    background-size: cover; /* L'image remplit entièrement le dos */
+    background-position: center; /* Centre l'image */
+    color: white; /* Couleur du texte (facultatif) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5em; /* Taille du texte */
+}
+#projet4 .flip-box-back {
+    background-image: url('projet\ 4.jpg'); /* Remplacez par le chemin de votre image */
+    background-size: cover; /* L'image remplit entièrement le dos */
+    background-position: center; /* Centre l'image */
+    color: white; /* Couleur du texte (facultatif) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5em; /* Taille du texte */
+}
+#projet5 .flip-box-back {
+    background-image: url('projet\ 5.jpg'); /* Remplacez par le chemin de votre image */
+    background-size: cover; /* L'image remplit entièrement le dos */
+    background-position: center; /* Centre l'image */
+    color: white; /* Couleur du texte (facultatif) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5em; /* Taille du texte */
+}
+#projet6 .flip-box-back {
+    background-image: url('projet\ 6.jpg'); /* Remplacez par le chemin de votre image */
+    background-size: cover; /* L'image remplit entièrement le dos */
+    background-position: center; /* Centre l'image */
+    color: white; /* Couleur du texte (facultatif) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5em; /* Taille du texte */
+}
+.flip-box {
+    width: 30%;
+    min-height: 300px;
+    perspective: 1000px; /* Pour l'effet 3D */
+    margin: 16px;
+}
+
+.flip-box-inner {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+    display: flex; /* Ajout pour centrer verticalement */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* S'assurer que les éléments restent en colonne */
+}
+
+.flip-box:hover .flip-box-inner {
+    transform: rotateX(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    display: flex; /* Utilisation de flexbox pour centrer le contenu */
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Style du recto */
+.flip-box-front {
+    background-color: #595e5a;
+    color: white;
+}
+
+/* Style du verso */
+.flip-box-back {
+    background-color: rgb(255, 255, 255);
+    color: rgb(185, 52, 52);
+    transform: rotateX(180deg);
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    background: radial-gradient(rgb(0, 255, 47), rgb(0, 0, 0));
+    width: 100%;
+    height: auto; /* Permet au footer de s'adapter à son contenu */
+    padding: 5px 0;
+    position: relative;
+}
+
+footer a {
+    display: inline-block;
+    text-decoration: none;
+    margin: 10px;
+}
+
+footer.hidden {
+    height: 0 !important;
+}
+
+.fa-brands {
+    color: white;
+    margin: 25px;
+}
+
+.fa-brands:hover {
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+/* Arrow-Up */
+#arrow-up {
+    position: sticky;
+    bottom: 20px;
+    left: 94%;
+    width: 55px;
+    height: 55px;
+    border-radius: 30%; /* Forme ronde */
+    border: 2px solid rgb(0, 0, 0); /* Bordure blanche */
+    text-align: center; /* Centrer le contenu */
+    padding-top: 10px; /* Espace en haut du bouton */
+    box-shadow: 17px 38px 40px -17px rgba(0, 0, 0, 0.29); /* Ombre */
+    background-color: gray;
+}
+
+#arrow-up:hover::before {
+    transition: all 0.75s ease-in-out;
+    transform: scale(3); /* Agrandit la flèche au survol */
+    opacity: 0; /* Réduit l'opacité au survol */
+}
+
+
+/* Animation Heartbeat */
+@keyframes heartbeat {
+    0%, 45% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+    }
+    10% {
+        transform: scale(0.91);
+        animation-timing-function: ease-in;
+    }
+    17% {
+        transform: scale(0.98);
+    }
+    33% {
+        transform: scale(0.87);
+        animation-timing-function: ease-in;
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .topnav {
+        flex-direction: column;
+    }
+
+    .topnav span {
+        margin-right: 0;
+    }
+
+    .flip-box {
+        width: 94%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .flip-box {
+        width: 45%;
+    }
+}
